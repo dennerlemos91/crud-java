@@ -16,13 +16,10 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Builder
 @Entity
-public class Agencia implements Serializable {
-
-    private static final long serialVersionUID = 215827378840061967L;
-
+public class Banco implements Serializable {
+    private static final long serialVersionUID = -6335368296670022052L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private Banco banco;
-    private String endereco;
+    private Long codigo;
+    private String nome;
 }
