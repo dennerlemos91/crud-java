@@ -5,10 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Data
@@ -25,6 +22,8 @@ public class Usuario implements Serializable {
     private String nome;
     private String email;
     private Integer cep;
+
+    @ManyToOne
     private Agencia agencia;
     private Integer conta;
 }
